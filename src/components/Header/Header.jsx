@@ -2,7 +2,7 @@ import ThemeButton from '../ThemeButton/ThemeButton';
 import styles from './Header.module.css';
 //import ThemeButton from './ThemeButton';
 
-function Header() {
+const Header = () => {
 	return (
 		<header className={styles.header}>
 			<h1>
@@ -11,6 +11,6 @@ function Header() {
 			</h1>
 		</header>
 	);
-}
+};
 
 export default Header;

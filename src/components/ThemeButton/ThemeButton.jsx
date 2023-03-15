@@ -1,6 +1,6 @@
 import styles from './ThemeButton.module.css';
 
-function ThemeButton() {
+const ThemeButton = () => {
 	return (
 		<button className={styles.themebutton}>
 			<svg xmlns='http://www.w3.org/2000/svg' width='26' height='26'>
@@ -12,5 +12,5 @@ function ThemeButton() {
 			</svg>
 		</button>
 	);
-}
+};
 export default ThemeButton;
