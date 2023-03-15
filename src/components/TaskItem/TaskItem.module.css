@@ -1,0 +1,59 @@
+.taskBox {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	min-height: 3rem;
+	padding: 0.2rem 1rem;
+	background-color: hsl(0, 0%, 98%);
+	transition: transform 0.3s;
+	border-bottom: solid 2px hsl(236, 33%, 92%);
+	opacity: 0;
+	transform: translateY(-25%);
+	animation: showTaskBox 0.8s 0.2s 1 forwards;
+}
+.taskBox:first-of-type {
+	border-radius: 5px 5px 0 0;
+}
+.taskBox:last-child {
+	border-radius: 0 0 5px 5px;
+	border-bottom: none;
+}
+.taskDescription {
+	width: 70%;
+	font-size: 1rem;
+	transition: text-decoration 0.3s, color 0.3s;
+	color: hsl(236, 9%, 61%);
+	margin: 0;
+}
+.checkbox {
+	border-radius: 50%;
+	width: 2.2rem;
+	height: 2.2rem;
+	vertical-align: middle;
+	border: 1px solid #ddd;
+	appearance: none;
+	-webkit-appearance: none;
+	outline: none;
+	cursor: pointer;
+}
+.checkbox:checked {
+	appearance: auto;
+	clip-path: circle(46% at 50% 46%);
+	color: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+}
+.deleteButton {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+@keyframes showTaskBox {
+	from {
+		opacity: 0;
+		transform: translateY(-25%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

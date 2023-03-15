@@ -1,6 +1,5 @@
-import ThemeButton from '../ThemeButton/ThemeButton';
 import styles from './Header.module.css';
-//import ThemeButton from './ThemeButton';
+import ThemeButton from '../ThemeButton/ThemeButton';
 
 const Header = () => {
 	return (

@@ -1,0 +1,28 @@
+.infoBar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	min-height: 3rem;
+	padding: 0.2rem 1rem;
+	background-color: hsl(0, 0%, 98%);
+	transition: transform 0.3s;
+	border-radius: 0 0 5px 5px;
+	border-bottom: none;
+}
+.info {
+	font-size: 0.8rem;
+	color: hsl(234, 11%, 52%);
+}
+
+.clearCompletedButton {
+	border: none;
+	background-color: transparent;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 0.8rem;
+	color: hsl(234, 11%, 52%);
+	cursor: pointer;
+}
+.clearCompletedButton:hover {
+	color: hsl(220, 98%, 61%);
+}

@@ -1,6 +1,6 @@
 import styles from './TaskInput.module.css';
 
-function TaskInput() {
+const TaskInput = () => {
 	return (
 		<input
 			type='text'
@@ -9,6 +9,6 @@ function TaskInput() {
 			required
 		/>
 	);
-}
+};
 
 export default TaskInput;
