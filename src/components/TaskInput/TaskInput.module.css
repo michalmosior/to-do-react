@@ -5,6 +5,7 @@
 	font-size: 1.2rem;
 	color: hsl(236, 9%, 61%);
 	background-color: hsl(0, 0%, 98%);
+	padding: 0.4rem;
 }
 
 .input::placeholder {
