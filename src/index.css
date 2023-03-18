@@ -6,6 +6,30 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
+	--header-font-color: #fff;
+	--body-background-color: hsl(236, 33%, 92%);
+	--background-color: hsl(0, 0%, 98%);
+	--font-color: hsl(236, 9%, 61%);
+	--button-font-color: hsl(234, 11%, 52%);
+	--button-hover-color: hsl(220, 98%, 61%);
+	--border-color: hsl(236, 33%, 92%);
+
+	/*--header-font-color: #fff;
+	--body-background-color: hsl(235, 21%, 11%);
+	--background-color: hsl(237, 14%, 26%);
+	--font-color: hsl(234, 39%, 85%);
+	--button-font-color: hsl(234, 11%, 52%);
+	--button-hover-color: hsl(220, 98%, 61%);
+	--border-color: hsl(220, 2%, 35%);*/
+}
+[data-theme='false'] {
+	--header-font-color: #fff;
+	--body-background-color: hsl(235, 21%, 11%);
+	--background-color: hsl(237, 14%, 26%);
+	--font-color: hsl(234, 39%, 85%);
+	--button-font-color: hsl(234, 11%, 52%);
+	--button-hover-color: hsl(220, 98%, 61%);
+	--border-color: hsl(220, 2%, 35%);
 }
 * {
 	box-sizing: border-box;
@@ -15,5 +39,4 @@
 body {
 	margin: 0;
 	color: #e6ddf9;
-	background-color: hsl(236, 33%, 92%);
 }

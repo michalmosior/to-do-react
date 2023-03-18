@@ -3,12 +3,12 @@
 	width: 80%;
 	border: none;
 	font-size: 1.2rem;
-	color: hsl(236, 9%, 61%);
-	background-color: hsl(0, 0%, 98%);
+	color: var(--font-color);
+	background-color: var(--background-color);
 	padding: 0.4rem;
 }
 
 .input::placeholder {
 	font-size: 1.2rem;
-	color: hsl(236, 9%, 61%);
+	color: var(--font-color);
 }

@@ -1,12 +1,12 @@
 import styles from './Header.module.css';
 import ThemeButton from '../ThemeButton/ThemeButton';
 
-const Header = () => {
+const Header = ({ changeTheme, theme }) => {
 	return (
-		<header className={styles.header}>
+		<header className={`${styles.header} ${styles.headerlight}`}>
 			<h1>
 				To Do
-				<ThemeButton />
+				<ThemeButton action={changeTheme} theme={theme} />
 			</h1>
 		</header>
 	);

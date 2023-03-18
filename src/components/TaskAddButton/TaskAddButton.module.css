@@ -2,10 +2,10 @@
 	border: none;
 	background-color: transparent;
 	font-size: 2rem;
-	color: hsl(234, 11%, 52%);
+	color: var(--button-font-color);
 	transition: color 0.3s;
 	cursor: pointer;
 }
 .addButton:hover {
-	color: hsl(220, 98%, 61%);
+	color: var(--button-hover-color);
 }
