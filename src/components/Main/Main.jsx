@@ -35,14 +35,20 @@ const Main = () => {
 			return oldTasks.filter((task) => task.id !== id);
 		});
 	};
-
+	const clearCompletedHandler = () => {
+		setTasks(tasks.filter((task) => !task.completed));
+	};
 	return (
 		<main className={styles.main}>
 			<form onSubmit={submitHandler}>
 				<TaskInput newTaskDescription={taskDescriptionHandler} />
 				<TaskAddButton />
 			</form>
-			<TasksList tasks={tasks} deleteTask={deleteTaskHandler} />
+			<TasksList
+				tasks={tasks}
+				deleteTask={deleteTaskHandler}
+				clearCompleted={clearCompletedHandler}
+			/>
 			<ButtonsBar />
 		</main>
 	);
