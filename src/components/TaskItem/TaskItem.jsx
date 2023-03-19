@@ -1,7 +1,7 @@
 import styles from './TaskItem.module.css';
 import iconCross from '../../assets/icon-cross.svg';
 
-const TaskItem = ({ tasks, id, description }) => {
+const TaskItem = ({ tasks, id, description, deleteTask }) => {
 	return (
 		<li className={styles.taskBox} id={id}>
 			<input
@@ -11,7 +11,7 @@ const TaskItem = ({ tasks, id, description }) => {
 				className={styles.checkbox}
 			/>
 			<p className={styles.taskDescription}>{description}</p>
-			<button className={styles.deleteButton}>
+			<button className={styles.deleteButton} onClick={deleteTask}>
 				<img src={iconCross} />
 			</button>
 		</li>

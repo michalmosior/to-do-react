@@ -29,13 +29,20 @@ const Main = () => {
 		setTasks((tasks) => [task, ...tasks]);
 	};
 
+	const deleteTaskHandler = (e) => {
+		let id = Number(e.target.closest('li').id);
+		setTasks((oldTasks) => {
+			return oldTasks.filter((task) => task.id !== id);
+		});
+	};
+
 	return (
 		<main className={styles.main}>
 			<form onSubmit={submitHandler}>
 				<TaskInput newTaskDescription={taskDescriptionHandler} />
 				<TaskAddButton />
 			</form>
-			<TasksList tasks={tasks} />
+			<TasksList tasks={tasks} deleteTask={deleteTaskHandler} />
 			<ButtonsBar />
 		</main>
 	);

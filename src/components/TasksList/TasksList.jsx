@@ -2,7 +2,7 @@ import styles from './TasksList.module.css';
 import TaskItem from '../TaskItem/TaskItem';
 import InfoBar from '../InfoBar/InfoBar';
 
-const TasksList = ({ tasks }) => {
+const TasksList = ({ tasks, deleteTask }) => {
 	return (
 		<ul className={styles.tasksList}>
 			{tasks.length > 0 &&
@@ -12,6 +12,7 @@ const TasksList = ({ tasks }) => {
 						description={task.taskDescription}
 						id={task.id}
 						tasks={tasks}
+						deleteTask = {deleteTask}
 					/>
 				))}
 			{tasks.length > 0 && <InfoBar itemsLeft={tasks.length} />}
