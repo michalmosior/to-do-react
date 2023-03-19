@@ -10,8 +10,8 @@ function App() {
 		setTheme(!theme);
 	};
 	return (
-		<div className={styles.app} data-theme={theme}>
-			<Header changeTheme={changeThemeHandler} theme={theme}/>
+		<div className={styles.app} data-theme={theme.toString()}>
+			<Header changeTheme={changeThemeHandler} theme={theme} />
 			<Main />
 		</div>
 	);
