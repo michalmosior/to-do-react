@@ -9,6 +9,7 @@ const Main = () => {
 	const [enteredDescription, setEnteredDescription] = useState('');
 	const [tasks, setTasks] = useState([]);
 	const [index, setIndex] = useState(0);
+	const [category, setCategory] = useState('all');
 
 	const submitHandler = (e) => {
 		e.preventDefault();
@@ -38,6 +39,9 @@ const Main = () => {
 	const clearCompletedHandler = () => {
 		setTasks(tasks.filter((task) => !task.completed));
 	};
+	const displayedCategorySwitch = (e) => {
+		setCategory(e.target.textContent.toLowerCase());
+	};
 	return (
 		<main className={styles.main}>
 			<form onSubmit={submitHandler}>
@@ -48,8 +52,9 @@ const Main = () => {
 				tasks={tasks}
 				deleteTask={deleteTaskHandler}
 				clearCompleted={clearCompletedHandler}
+				category={category}
 			/>
-			<ButtonsBar />
+			<ButtonsBar tasks={tasks} categorySwitch={displayedCategorySwitch} />
 		</main>
 	);
 };
