@@ -1,7 +1,7 @@
 import styles from './TaskItem.module.css';
 import iconCross from '../../assets/icon-cross.svg';
 
-const TaskItem = ({ tasks, id, description, deleteTask }) => {
+const TaskItem = ({ tasks, id, description, deleteTask, completed }) => {
 	const onCompleteTask = (e) => {
 		const checkbox = e.target;
 		let id = Number(checkbox.closest('li').id);
@@ -15,7 +15,7 @@ const TaskItem = ({ tasks, id, description, deleteTask }) => {
 			tasks[index].completed = false;
 		}
 	};
-
+	
 	return (
 		<li className={styles.taskBox} id={id}>
 			<input
@@ -24,6 +24,7 @@ const TaskItem = ({ tasks, id, description, deleteTask }) => {
 				id='check'
 				className={styles.checkbox}
 				onClick={onCompleteTask}
+				checked={completed}
 			/>
 			<p className={styles.taskDescription}>{description}</p>
 			<button className={styles.deleteButton} onClick={deleteTask}>

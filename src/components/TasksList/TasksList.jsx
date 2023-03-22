@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styles from './TasksList.module.css';
 import TaskItem from '../TaskItem/TaskItem';
 import InfoBar from '../InfoBar/InfoBar';
@@ -11,6 +12,7 @@ const TasksList = ({ tasks, deleteTask, clearCompleted, category }) => {
 	} else {
 		filteredTasks = tasks;
 	}
+
 	return (
 		<ul className={styles.tasksList}>
 			{tasks.length === 0 && <p className={styles.notasks}>No tasks found!</p>}
@@ -22,6 +24,7 @@ const TasksList = ({ tasks, deleteTask, clearCompleted, category }) => {
 						id={task.id}
 						tasks={tasks}
 						deleteTask={deleteTask}
+						completed={task.completed ? 'checked' : null}
 					/>
 				))}
 			{tasks.length > 0 && (
